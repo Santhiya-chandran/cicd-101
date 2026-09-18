@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CI/CD Pipeline Explained</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">CI/CD<span>Pipeline</span></div>
+  <nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#stages">Stages</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Continuous Integration / Continuous Delivery</h1>
+  <p>Automate build, test, and deploy. Ship code fast. Ship code safe.</p>
+  <a href="#pipeline" class="btn">See How It Works</a>
+</section>
+
+<section id="pipeline" class="pipeline-section">
+  <h2>Pipeline Flow</h2>
+  <p class="sub">Click each stage to view detail.</p>
+  <div class="pipeline" id="pipelineFlow">
+    <div class="stage" data-info="Developer pushes code to Git repository (GitHub, GitLab, Bitbucket).">
+      <span class="icon">📝</span>
+      <p>Code Commit</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Pipeline triggers automatically. Code compiled or packaged.">
+      <span class="icon">🔨</span>
+      <p>Build</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Unit tests, integration tests, static analysis run automatically.">
+      <span class="icon">🧪</span>
+      <p>Test</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Code packaged into artifact or container image, stored in registry.">
+      <span class="icon">📦</span>
+      <p>Package</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Deploy to staging environment for further validation.">
+      <span class="icon">🚀</span>
+      <p>Deploy Staging</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Approved build released to production. Automated or manual gate.">
+      <span class="icon">🌐</span>
+      <p>Deploy Production</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage" data-info="Logs, metrics, alerts tracked. Feedback loops back to dev team.">
+      <span class="icon">📊</span>
+      <p>Monitor</p>
+    </div>
+  </div>
+  <div class="info-box" id="infoBox">Select stage above to read description.</div>
+</section>
+
+<section id="stages" class="stages-section">
+  <h2>CI vs CD</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Continuous Integration (CI)</h3>
+      <p>Developers merge code changes into shared repo frequently. Each merge triggers automated build and test.</p>
+      <ul>
+        <li>Catch bugs early</li>
+        <li>Avoid integration conflicts</li>
+        <li>Fast feedback to developers</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Continuous Delivery (CD)</h3>
+      <p>Code that passes CI automatically prepared for release. Deployment to production requires manual approval.</p>
+      <ul>
+        <li>Release-ready builds always</li>
+        <li>Reduced deployment risk</li>
+        <li>Manual gate before prod</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Continuous Deployment</h3>
+      <p>Every change that passes automated tests deploys to production automatically. No manual step.</p>
+      <ul>
+        <li>Fastest delivery speed</li>
+        <li>Requires strong test coverage</li>
+        <li>High automation trust</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="tools-section">
+  <h2>Common CI/CD Tools</h2>
+  <div class="tools-grid">
+    <div class="tool">Jenkins</div>
+    <div class="tool">GitHub Actions</div>
+    <div class="tool">GitLab CI</div>
+    <div class="tool">CircleCI</div>
+    <div class="tool">Travis CI</div>
+    <div class="tool">Azure DevOps</div>
+    <div class="tool">ArgoCD</div>
+    <div class="tool">Docker</div>
+    <div class="tool">Kubernetes</div>
+  </div>
+</section>
+
+<section id="benefits" class="benefits-section">
+  <h2>Why CI/CD Matters</h2>
+  <div class="benefits-grid">
+    <div class="benefit"><h3>Speed</h3><p>Ship features and fixes faster with less manual work.</p></div>
+    <div class="benefit"><h3>Quality</h3><p>Automated tests catch bugs before they reach users.</p></div>
+    <div class="benefit"><h3>Consistency</h3><p>Same automated process every time. No manual drift.</p></div>
+    <div class="benefit"><h3>Feedback</h3><p>Developers know within minutes if a change broke something.</p></div>
+  </div>
+</section>
+
+<section id="faq" class="faq-section">
+  <h2>FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">What is a pipeline?</div>
+      <div class="faq-answer">Sequence of automated steps that take code from commit to production.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I need containers for CI/CD?</div>
+      <div class="faq-answer">No. Containers help consistency but pipelines work with any deployment target.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">CI/CD vs DevOps?</div>
+      <div class="faq-answer">CI/CD is practice within DevOps culture. DevOps is broader: culture, process, tooling.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built with HTML, CSS, JS only. No frameworks.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
